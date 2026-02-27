@@ -2,6 +2,7 @@ services:
   - type: web
     name: invoice-backend
     runtime: python
+    plan: free                    # ADD THIS LINE
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
@@ -16,11 +17,12 @@ services:
       - key: ACCESS_TOKEN_EXPIRE_MINUTES
         value: 30
       - key: AZURE_ENDPOINT
-        sync: false  # You'll add this manually
+        sync: false
       - key: AZURE_KEY
-        sync: false  # You'll add this manually
+        sync: false
 
 databases:
   - name: invoice-db
+    plan: free                    # ADD THIS LINE
     databaseName: invoice_db
     user: invoice_user
