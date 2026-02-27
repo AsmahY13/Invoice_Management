@@ -2,9 +2,9 @@ services:
   - type: web
     name: invoice-backend
     runtime: python
-    plan: free                    # ADD THIS LINE
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: DATABASE_URL
         fromDatabase:
@@ -23,6 +23,6 @@ services:
 
 databases:
   - name: invoice-db
-    plan: free                    # ADD THIS LINE
+    plan: free
     databaseName: invoice_db
     user: invoice_user
