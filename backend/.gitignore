@@ -1,0 +1,58 @@
+# Your existing entries:
+.env
+.env.local
+.env.*.local
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Add these missing entries:
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Database files (if using local DB)
+*.db
+*.sqlite3
+*.sqlite
+
+# Logs
+*.log
+logs/
+
+# Python packages
+*.egg-info/
+dist/
+build/
+*.so
+.Python
+pyvenv.cfg
+
+# Export/upload directories (if you have these)
+uploads/
+exports/
+temp/
+media/
+
+# Jupyter notebooks (if any)
+.ipynb_checkpoints/
+*.ipynb
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Docker (if using)
+docker-compose.override.yml
