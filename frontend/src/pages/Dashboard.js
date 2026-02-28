@@ -799,7 +799,7 @@ const dashboardService = {
                            doc.status.includes('pending') ? 'pending' : 
                            'uploaded',
                     timestamp: new Date(doc.upload_date),
-                    timeAgo: formatRelativeTime(new Date(doc.upload_date))
+                    timeAgo: formatRelativeTime(new Date(doc.upload_date + 'Z')) 
                 }));
         } catch (error) {
             console.error('Error fetching activity:', error);
